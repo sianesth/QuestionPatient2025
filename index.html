@@ -162,9 +162,27 @@
           <p class="indent">ในแบบสอบถามนี้ใช้คำว่า <u>"ดมยา"</u> เพื่อสื่อถึง วิสัญญี/การระงับความรู้สึก</P>
 </div>
 
-  <form method="POST" action="https://script.google.com/macros/s/AKfycbxbTaClNIDf_fx94gGK1-91AKYqkRrR4e0OWR085Jgwxcngf9zKwJui_6aJ0IGy8u9w/exec">
+  <form method="POST" action="https://script.google.com/macros/s/AKfycbzWoWoi8XcMt5ZKL4LxcSgMz2B2qvXGP6h6ht8nUig3yknovD_6eT7KiA-RtPnOmEiW/exec">
     <h3>ตอนที่ 1: ข้อมูลทั่วไป</h3>
-    <p style= "font-size: 16px; font-weight: bold;">1. วิธีดมยาที่ท่านได้รับสำหรับการผ่าตัดครั้งนี้</p>
+    <p style="font-size: 16px; font-weight: bold;">1. ท่านมาเข้ารับการผ่าตัดเกี่ยวกับด้านใด</p>
+    <label><input type="radio" name="service" value="Ortho"> กระดูก</label><br>
+    <label><input type="radio" name="service" value="EYE"> ตา</label><br>
+    <label><input type="radio" name="service" value="CVT"> ทรวงอก/หัวใจ</label><br>
+    <label><input type="radio" name="service" value="Plastic"> ศัลยกรรมตกแต่ง</label><br>
+    <label><input type="radio" name="service" value="Neuro"> ศัลยกรรมประสาท (สมองหรือศีรษะ)</label><br>
+    <label><input type="radio" name="service" value="ENT"> หู คอ จมูก</label><br>
+    <label><input type="radio" name="service" value="URO"> ระทางเดินปัสสาวะ</label><br>
+    <label><input type="radio" name="service" value="GEN/VAS"> ผ่าตัดในช่องท้องหรือหลอดเลือด</label><br>
+    <label><input type="radio" name="service" value="H&N"> คอ และเต้านม</label><br>
+    <label><input type="radio" name="service" value="GYN"> นรีเวช (โรคเฉพาะสตรี)</label><br>
+    <label><input type="radio" name="service" value="OBS"> สูติศาสตร์ (ผ่าตัดคลอดทางหน้าท้อง)</label><br>
+    <label><input type="radio" name="service" value="GI scope"> ส่องกล้องตรวจทางเดินอาหาร</label><br>
+    <label><input type="radio" name="service" value="IR/RT"> การตรวจ หรือรักษาทางรังสี</label><br>
+    <label><input type="radio" name="service" value="TraumaOrtho"> อุบัติเหตุกระดูก</label><br>
+    <label><input type="radio" name="service" value="TraumaGeneral"> อุบัติเหตุทั่วไป</label><br>
+    <label><input type="radio" name="service" value="TraumaNeuro"> อุบัติเหตุสมอง</label><br>
+
+    <p style= "font-size: 16px; font-weight: bold;">2. วิธีดมยาที่ท่านได้รับสำหรับการผ่าตัดครั้งนี้</p>
     <label><input type="radio" name="method" value="general"> หลับ/ไม่รู้สึกตัวระหว่างผ่าตัด (เช่น ดมยาสลบ)</label><br>
     <label><input type="radio" name="method" value="spinal_sleep"> ฉีดยาชาที่หลัง <span style="white-space:nowrap;"><u>แล้ว</u>หลับไป</span></label><br>
     <label><input type="radio" name="method" value="spinal_awake"> ฉีดยาชาที่หลัง <u>แต่ไม่หลับ</u></label><br>
@@ -173,7 +191,7 @@
     <label><input type="radio" name="method" value="spray"> พ่นยาชา</label><br>
     <label><input type="radio" name="method" value="unknown"> จำไม่ได้ / ไม่แน่ใจ</label><br>
 
-    <p style="font-size: 16px; font-weight: bold;">2. ท่านเคยได้รับการดมยาที่โรงพยาบาลศิริราชมากี่ครั้งแล้ว</p>
+    <p style="font-size: 16px; font-weight: bold;">3. ท่านเคยได้รับการดมยาที่โรงพยาบาลศิริราชมากี่ครั้งแล้ว</p>
     <label><input type="radio" name="history" value="first"> ครั้งแรก</label><br>
     <label><input type="radio" name="history" value="more"> มากกว่า 1 ครั้ง</label><br>
 
@@ -339,8 +357,9 @@
 
 <script>
   const fieldLabels = {
-    method: "1. วิธีดมยาที่ท่านได้รับ",
-    history: "2. เคยได้รับการดมยากี่ครั้ง",
+    service: "1. ผ่าตัดอะไร",
+    method: "2. วิธีดมยาที่ท่านได้รับ",
+    history: "3. เคยได้รับการดมยากี่ครั้ง",
     before: "ตอนที่ 2 ข้อ 1. แพทย์แนะนำตัวหรือไม่",
     q1: "ตอนที่ 2 ข้อ 2.1 มารยาทของแพทย์",
     q2: "ตอนที่ 2 ข้อ 2.2 เปิดโอกาสถาม",
